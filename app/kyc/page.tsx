@@ -1,7 +1,6 @@
 "use client"
 
-import { useSearchParams } from "next/navigation"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Shield } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Checkbox } from "@/components/ui/checkbox"
@@ -9,11 +8,15 @@ import { Button } from "@/components/ui/button"
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion"
 
 export default function KycPage() {
-  const searchParams = useSearchParams()
-  const selectedPlan = searchParams.get("plan")
-  const selectedPrice = searchParams.get("price")
-
+  const [selectedPlan, setSelectedPlan] = useState<{ name: string; price: string } | null>(null)
   const [consent, setConsent] = useState(false)
+
+  useEffect(() => {
+    const stored = localStorage.getItem("selectedPlan")
+    if (stored) {
+      setSelectedPlan(JSON.parse(stored))
+    }
+  }, [])
 
   return (
     <div className="min-h-screen bg-white">
@@ -54,8 +57,8 @@ export default function KycPage() {
                 <h3 className="font-semibold text-lg mb-4 text-[rgb(21,93,253)]">Premium summary</h3>
                 <div className="text-sm space-y-2">
                   <div className="flex justify-between">
-                    <span className="text-gray-700">{selectedPlan || "Selected Plan"}</span>
-                    <span className="font-medium">{selectedPrice || "₹0"}</span>
+                    <span className="text-gray-700">{selectedPlan?.name || "Selected Plan"}</span>
+                    <span className="font-medium">{selectedPlan?.price || "₹0"}</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-gray-700">Additional Covers</span>
