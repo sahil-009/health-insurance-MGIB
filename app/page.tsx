@@ -45,7 +45,7 @@ export default function Home() {
               Contact
             </a>
           </nav>
-          <Button className="bg-white text-[rgb(21,93,253)] hover:bg-[rgb(219,234,255)]" onClick={() => router.push('/kyc')}>Login</Button>
+          <Button className="bg-white text-[rgb(21,93,253)] hover:bg-[rgb(219,234,255)]" >Login</Button>
         </div>
       </header>
 
@@ -166,7 +166,7 @@ export default function Home() {
                       <span>Ambulance Coverage</span>
                     </li>
                   </ul>
-                  <Button className="w-full mt-6 bg-[rgb(21,93,253)] hover:bg-[rgb(21,93,253)/90]">Buy Now</Button>
+                  <Button className="w-full mt-6 bg-[rgb(21,93,253)] hover:bg-[rgb(21,93,253)/90]" onClick={() => router.push('/kyc')}>Buy Now</Button>
                 </div>
               </CardContent>
             </Card>
@@ -206,7 +206,7 @@ export default function Home() {
                       <span>No Co-payment</span>
                     </li>
                   </ul>
-                  <Button className="w-full mt-6 bg-[rgb(21,93,253)] hover:bg-[rgb(21,93,253)/90]">Buy Now</Button>
+                  <Button className="w-full mt-6 bg-[rgb(21,93,253)] hover:bg-[rgb(21,93,253)/90]" onClick={() => router.push('/kyc')}>Buy Now</Button>
                 </div>
               </CardContent>
             </Card>
@@ -243,7 +243,7 @@ export default function Home() {
                       <span>Wellness Benefits</span>
                     </li>
                   </ul>
-                  <Button className="w-full mt-6 bg-[rgb(21,93,253)] hover:bg-[rgb(21,93,253)/90]">Buy Now</Button>
+                  <Button className="w-full mt-6 bg-[rgb(21,93,253)] hover:bg-[rgb(21,93,253)/90]" onClick={() => router.push('/kyc')}>Buy Now</Button>
                 </div>
               </CardContent>
             </Card>
