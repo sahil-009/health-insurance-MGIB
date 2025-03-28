@@ -22,7 +22,7 @@ export default function HealthFormSection() {
   </h2>
   </Card>
 
-        <Card className="max-w-3xl mx-auto shadow-lg border-[rgb(219,234,255)]">
+        <Card className="max-w-4xl w-full shadow-lg border-[rgb(219,234,255)]">
           <CardContent className="p-0">
             <div className="bg-[rgb(219,234,255)] px-6 py-4 md:px-8 md:py-6">
               <Tabs defaultValue="individual" onValueChange={setPolicyType}>
@@ -54,22 +54,22 @@ export default function HealthFormSection() {
             <div className="px-6 py-4 md:px-8 md:py-6 space-y-6 md:space-y-8">
               <div>
                 <h3 className="font-medium text-base md:text-lg mb-3 md:mb-4 text-gray-800">Select age group</h3>
-                <RadioGroup defaultValue="adult" className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+                <RadioGroup defaultValue="adult" className="grid grid-cols-2 text-xs md:grid-cols-4 gap-3 md:gap-4">
                   <div className="flex items-center space-x-3 border rounded-lg p-3 hover:bg-[rgb(219,234,255)] cursor-pointer">
                     <RadioGroupItem value="adult" id="adult" />
-                    <Label htmlFor="adult" className="text-sm md:text-base">Adult (18-45)</Label>
+                    <Label htmlFor="adult" className="text-xs">Adult (18-45)</Label>
                   </div>
                   <div className="flex items-center space-x-3 border rounded-lg p-3 hover:bg-[rgb(219,234,255)] cursor-pointer">
                     <RadioGroupItem value="senior" id="senior" />
-                    <Label htmlFor="senior" className="text-sm md:text-base">Senior (46-65)</Label>
+                    <Label htmlFor="senior" className="text-xs">Senior (46-65)</Label>
                   </div>
                   <div className="flex items-center space-x-3 border rounded-lg p-3 hover:bg-[rgb(219,234,255)] cursor-pointer">
                     <RadioGroupItem value="child" id="child" />
-                    <Label htmlFor="child" className="text-sm md:text-base">Child (0-17)</Label>
+                    <Label htmlFor="child" className="text-xs">Child (0-17)</Label>
                   </div>
                   <div className="flex items-center space-x-3 border rounded-lg p-3 hover:bg-[rgb(219,234,255)] cursor-pointer">
                     <RadioGroupItem value="senior-plus" id="senior-plus" />
-                    <Label htmlFor="senior-plus" className="text-sm md:text-base">Senior+ (66+)</Label>
+                    <Label htmlFor="senior-plus" className="text-xs">Senior+ (66+)</Label>
                   </div>
                 </RadioGroup>
               </div>
