@@ -11,10 +11,14 @@ import { Input } from "@/components/ui/input"
 import { Checkbox } from "@/components/ui/checkbox"
 import dynamic from "next/dynamic"
 import HealthFormSection from "@/components/health-model"
+
+import { useRouter } from 'next/navigation'
 // Dynamically import the 3D component with no SSR to avoid hydration issues
 const HealthModel = dynamic(() => import("@/components/health-model"), { ssr: false })
 
 export default function Home() {
+
+  const router = useRouter();
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
@@ -41,7 +45,7 @@ export default function Home() {
               Contact
             </a>
           </nav>
-          <Button className="bg-white text-[rgb(21,93,253)] hover:bg-[rgb(219,234,255)]">Login</Button>
+          <Button className="bg-white text-[rgb(21,93,253)] hover:bg-[rgb(219,234,255)]" onClick={() => router.push('/kyc')}>Login</Button>
         </div>
       </header>
 
@@ -74,8 +78,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Policy Selection */}
-      <HealthFormSection />
+      {/* Policy Selection
+      <HealthFormSection /> */}
 
       {/* Features */}
       <section className="py-16 bg-[rgb(219,234,255)]">
