@@ -1,5 +1,5 @@
 "use client"
-
+import { useRouter } from 'next/navigation'
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -16,6 +16,7 @@ import {
 let memberId = 1
 
 export default function HealthFormSection() {
+  const router = useRouter()
   const [policyType, setPolicyType] = useState("individual")
   const [members, setMembers] = useState([])
 
@@ -144,9 +145,13 @@ export default function HealthFormSection() {
 
             {/* CTA */}
             <div className="pt-4">
-              <Button className="w-full bg-[rgb(21,93,253)] hover:bg-[rgb(21,93,253)/90] py-6 text-base md:text-lg">
-                Next
-              </Button>
+            <Button
+                className="w-full bg-[rgb(21,93,253)] hover:bg-[rgb(21,93,253)/90] py-6 text-base md:text-lg"
+                onClick={() => router.push('/plans')}
+                  >
+                      Next
+                    </Button>
+
             </div>
           </CardContent>
         </Card>
