@@ -32,7 +32,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Header/>
+      {/* <Header/> */}
       
       {/* hero section */}
       <section className="min-h-[80vh] py-8 md:py-16 bg-[rgb(219,234,255)]">

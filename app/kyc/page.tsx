@@ -51,7 +51,7 @@ export default function KycPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <motion.header 
+      {/* <motion.header 
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ type: "spring", stiffness: 100 }}
@@ -83,7 +83,7 @@ export default function KycPage() {
             <Button className="bg-white text-[rgb(21,93,253)] hover:bg-[rgb(219,234,255)]">Login</Button>
           </motion.div>
         </div>
-      </motion.header>
+      </motion.header> */}
 
       <motion.section 
         initial="hidden"

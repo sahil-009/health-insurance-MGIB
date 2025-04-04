@@ -19,7 +19,7 @@ export default function PlansPage() {
   return (
     <div className="bg-[#f6f9ff] min-h-screen">
       {/* Blue Top Header */}
-      <div className="bg-[rgb(21,93,253)] text-white py-4 shadow-md">
+      {/* <div className="bg-[rgb(21,93,253)] text-white py-4 shadow-md">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-2 text-center md:text-left">
           <div className="flex items-center gap-2">
             <Shield className="text-white h-6 w-6" />
@@ -32,7 +32,7 @@ export default function PlansPage() {
             </p>
           )}
         </div>
-      </div>
+      </div> */}
 
       {/* Plans Section */}
       <section id="plans" className="py-12 md:py-16 px-4">
